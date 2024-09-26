@@ -2,7 +2,6 @@ name: Autograding Tests
 'on':
 - push
 - repository_dispatch
-- workflow_dispatch
 permissions:
   checks: write
   actions: read
@@ -20,7 +19,7 @@ jobs:
       with:
         timeout: 15
         max-score: 30
-        setup-command: pip3 install pandas pytest
+        setup-command: pip install pytest pandas
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
