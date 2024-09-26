@@ -20,7 +20,7 @@ def get_the_cheapest_big_mac_price_by_year(year):
     name = row['name'] 
     code = row['iso_a3']
     price = row['dollar_price']
-    return f"{name} ({code}): ${round(price,2)}"
+    return f"{name} {code}: ${round(price,2)}"
 
 def get_the_most_expensive_big_mac_price_by_year(year):
     file = df[df['date'].str.startswith(str(year))]
@@ -29,7 +29,7 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     name = row['name']
     code = row['iso_a3']
     price = row['dollar_price']
-    return f"{name} ({code}): ${round(price,2)}"
+    return f"{name} {code}: ${round(price,2)}"
 
 
 if __name__ == "__main__":
